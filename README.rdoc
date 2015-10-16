@@ -1,1 +1,4 @@
 
+Created one Million records using DataTables supporting the below functionalities:
+
+Pagination, instant search and multi-column ordering
