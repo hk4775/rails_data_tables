@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @products }
+      format.json { render json: ProductsDatatable.new(view_context) }
     end
   end
 
@@ -15,10 +15,10 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @product }
-    end
+    # respond_to do |format|
+    #   format.html # show.html.erb
+    #   format.json { render json: @product }
+    # end
   end
 
   # GET /products/new
